@@ -1,7 +1,7 @@
 umask 022
 
 #Prompt
-export PS1="\t@\u:\w$"
+export PS1="[ \t ] \u:\w$"
 
 #aliases
 alias ls='ls -CF'
@@ -14,3 +14,5 @@ export PAGER='/usr/bin/lv -c'
 export EDITER='/usr/bin/vim'
 export LC_ALL='ja_JP.UTF-8'
 export LC_MESSAGES='ja_JP.UTF-8'
+export CLICOLOR=1
+export LSCOLORS=DxGxcxdxCxegedabagacad
