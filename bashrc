@@ -1,5 +1,8 @@
 umask 022
 
+#Prompt
+export PS1="\t@\u:\w$"
+
 #aliases
 alias ls='ls -CF'
 alias rm='rm -i'
