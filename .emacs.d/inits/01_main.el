@@ -1,4 +1,14 @@
-(dolist (dir (list
+;; Language
+;; set_language_japanese
+(set-language-environment 'Japanese)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-buffer-file-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
+(setq file-name-coding-system 'utf-8)
+;; path
+(require 'ucs-normalize)(dolist (dir (list
               "/sbin"
               "/usr/sbin"
               "/bin"
@@ -9,7 +19,6 @@
               (expand-file-name "~/bin")
               (expand-file-name "~/.emacs.d/bin")
               ))
- ;; PATH と exec-path に同じ物を追加します
  (when (and (file-exists-p dir) (not (member dir exec-path)))
    (setenv "PATH" (concat dir ":" (getenv "PATH")))
    (setq exec-path (append (list dir) exec-path))))
@@ -21,7 +30,6 @@
 (defun skt:shell ()
   (or (executable-find "bash"
 
-      ;; (executable-find "f_bash") ;; Emacs + Cygwin を利用する人は Bash の代りにこれにしてください
       (executable-find "cmdproxy")
       (error "can't find 'shell' command in PATH!!")))
 
@@ -33,16 +41,6 @@
 ;; filesystem
 (cond
  ((or (eq window-system 'mac) (eq window-system 'ns))
-  ;; Mac OS X の HFS+ ファイルフォーマットではファイル名は NFD (の様な物)で扱うため以下の設定をする必要がある
-  (require 'ucs-normalize)
   (setq file-name-coding-system 'utf-8-hfs)
   (setq locale-coding-system 'utf-8-hfs))
-
-;; display
-(autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
-(add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on)
-
-
-
-
 
