@@ -8,7 +8,8 @@ alias ls='ls -CF'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
-alias goinit='cd ~/.dotfiles/.emacs.d/inits'        
+alias goinit='cd ~/.dotfiles/.emacs.d/inits'
+        
         
 #Setting
 export PAGER='/usr/bin/lv -c'
@@ -17,3 +18,7 @@ export LC_ALL='ja_JP.UTF-8'
 export LC_MESSAGES='ja_JP.UTF-8'
 export CLICOLOR=1
 export LSCOLORS=DxGxcxdxCxegedabagacad
+
+perl -wle \
+    'do { print qq/(setenv "$_" "$ENV{$_}")/ if exists $ENV{$_} } for @ARGV' \
+    PATH > ~/.dotfiles/.emacs.d/elisp/shellenv.el
