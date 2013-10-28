@@ -8,6 +8,7 @@ alias ls='ls -CF'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
+alias goinit='cd ~/.dotfiles/.emacs.d/inits'        
         
 #Setting
 export PAGER='/usr/bin/lv -c'
