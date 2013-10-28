@@ -6,6 +6,9 @@
 (show-paren-mode)
 (setq completion-ignore-case t)
 (global-auto-revert-mode 1)
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+
 
 ;;; バックアップファイルを作らない
 (setq backup-inhibited t)
