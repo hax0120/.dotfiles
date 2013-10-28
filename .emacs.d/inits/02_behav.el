@@ -22,3 +22,10 @@
 ;; spelcheck
 (setq-default flyspell-mode t)
 (setq ispell-dictionary "american")
+
+;; onC
+(add-hook 'c-mode-common-hook
+          '(lambda ()
+             ;; flyspell-prog-mode をオンにする
+             (flyspell-prog-mode)
+))

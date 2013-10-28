@@ -12,6 +12,13 @@
 (setq next-line-add-newlines nil)
 (setq c-default-style
 '((java-mode . "java") (other . "linux")))
+(add-hook 'c-mode-common-hook
+          '(lambda ()
+             ;; センテンスの終了である ';' を入力したら、自動改行+インデント
+             (c-toggle-auto-hungry-state 1)
+             ;; RET キーで自動改行+インデント
+             (define-key c-mode-base-map "\C-m" 'newline-and-indent)
+))
 
 ;; color
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
