@@ -6,8 +6,6 @@
 (show-paren-mode)
 (setq completion-ignore-case t)
 (global-auto-revert-mode 1)
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
 ;;; バックアップファイルを作らない
 (setq backup-inhibited t)
@@ -24,23 +22,3 @@
 ;; spelcheck
 (setq-default flyspell-mode t)
 (setq ispell-dictionary "american")
-
-;; reconf
-(when (require 'recentf nil t)
-  (setq recentf-max-saved-items 2000)
-  (setq recentf-exclude '(".recentf"))
-  (setq recentf-auto-cleanup 10)
-  (setq recentf-auto-save-timer
-        (run-with-idle-timer 30 t 'recentf-save-list))
-  (recentf-mode 1)
-  (require 'recentf-ext))
-
-;; 関数定義の表示
-(add-hook 'emacs-lisp-mode-hook '(lambda () (require 'eldoc-extension) (eldoc-mode t) ))
-
-;; buffer
-(iswitchb-mode t)
-(iswitchb-default-keybindings)
-
-;; server
-(if window-system (server-start))
