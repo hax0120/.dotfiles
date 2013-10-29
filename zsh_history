@@ -1,0 +1,75 @@
+emacs .zshrc
+source .zshrc
+emacs .zshrc
+source .zshrc
+autoload -U compinit && compinit
+autoload -U compinit
+compinit -u
+emacs .zshrc
+source .zshrc
+emacs .zshrc
+cd /usr/local/bin
+ls
+zsh-5.0.2
+exit
+..
+ls
+share
+ls
+zsh
+ls
+exit
+..
+ls
+library
+ls
+..
+locate function
+sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.locate.plist
+locate function
+find function
+find functions
+find zsh
+emacs .zshrc
+cd
+emacs .zshrc
+source .zshrc
+emacs .zshrc
+cd .dotfiles/.emacs.d/elisp
+emacs .zshrc
+source .zshrc
+emacs .zshrc
+: 1383021901:0;cd $fpath
+: 1383021927:0;echo $fpath
+: 1383021997:0;source .zshrc
+: 1383022019:0;ls ./dotifiles/zsh
+: 1383022029:0;mkdir ./dotifiles/zsh
+: 1383022044:0;mkdir .dotifiles/zsh
+: 1383022050:0;ls -a
+: 1383022073:0;mkdir .dotfiles/zsh
+: 1383022098:0;chmod -x .dotfiles/zsh
+: 1383022104:0;source .zshrc
+: 1383022360:0;git status
+: 1383022388:0;git push origin master
+: 1383022446:0;git remote add origin git@github.com
+: 1383022460:0;git remote add github git@github.com
+: 1383022469:0;git push github master
+: 1383022489:0;git push
+: 1383022506:0;ls
+: 1383022509:0;ls -a
+: 1383022519:0;open .gitconfig
+: 1383022540:0;open .gitignore_grobal
+: 1383022556:0;open .gitignore_global
+: 1383022573:0;.git
+: 1383022574:0;ls
+: 1383022582:0;open branches
+: 1383022593:0;open index
+: 1383022633:0;cd
+: 1383022636:0;git inits
+: 1383022639:0;git init
+: 1383022707:0;git remote add dot ssh://github.com/hax0120/.dotfiles.git
+: 1383022723:0;git pull
+: 1383022736:0;git init
+: 1383022746:0;git remote add dot http://github.com/hax0120/.dotfiles.git
+: 1383022782:0;git pull dot master
+: 1383022799:0;git pull origin master
