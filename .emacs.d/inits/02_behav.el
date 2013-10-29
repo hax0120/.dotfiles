@@ -8,7 +8,7 @@
 (global-auto-revert-mode 1)
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
-
+(global-linum-mode)
 
 ;;; バックアップファイルを作らない
 (setq backup-inhibited t)

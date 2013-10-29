@@ -19,10 +19,10 @@
 (ac-config-default)
 
 ;; Auto_install
-(require 'auto-install)
-(add-to-list 'load-path  auto-install-directory)
-(auto-install-update-emacswiki-package-name t)
-(auto-install-compatibility-setup)
+;(require 'auto-install)
+;(add-to-list 'load-path  auto-install-directory)
+;(auto-install-update-emacswiki-package-name t)
+;(auto-install-compatibility-setup)
 
 ;; Markdown
 (require 'markdown-mode)
@@ -45,3 +45,34 @@
 ;; Path
 (require 'exec-path-from-shell)
 (exec-path-from-shell-initialize)
+
+;; org-mode
+(require 'org)
+;; キーバインドの設定
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-cr" 'org-remember)
+;; 拡張子がorgのファイルを開いた時，自動的にorg-modeにする
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+;; org-modeでの強調表示を可能にする
+(add-hook 'org-mode-hook 'turn-on-font-lock)
+;; 見出しの余分な*を消す
+(setq org-hide-leading-stars t)
+;; org-default-notes-fileのディレクトリ
+(setq org-directory "~/org/")
+;; org-default-notes-fileのファイル名
+(setq org-default-notes-file "notes.org")
+
+;; auto-async-byte-compile
+(require 'auto-async-byte-compile)
+(setq auto-async-byte-compile-exclude-files-regexp "/junk/")
+(add-hook 'emacs-lisp-mode-hook 'enable-auto-async-byte-compile-mode)
+
+;; rainbow
+(require 'rainbow-delimiters)
+(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
+
+;; quickrun
+(require 'quickrun)
+(global-set-key "\C-c\C-q" 'quickrun)
+(global-set-key "\C-c\C-i" 'indent-region)
